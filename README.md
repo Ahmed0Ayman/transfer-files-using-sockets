@@ -13,3 +13,6 @@ to build this project you only need to open terminal in your project directory a
 server and client executable files then open another terminal one for client and the other for server so first run server then run your client with the required arguments 
 
 if you press ctrl + c we will see message on the ending of transfer 
+
+
+https://www.youtube.com/watch?v=cOpA3JU3854 
