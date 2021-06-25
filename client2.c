@@ -39,10 +39,7 @@
 
 
 
-
-/* the second and third arguments from the terminal used as file path read from the server and write with client */
-
-int main(int argc , char const * argv[]) 
+int main(int argc , char const * argv[])
 {
 
 	if(argc < 3) /* check if we received valid arguments from terminal */
@@ -76,7 +73,7 @@ int main(int argc , char const * argv[])
 	server_addr.sin_addr.s_addr = INADDR_ANY ;
 	
 	/* requested connection with  specified server */
-		CHECK_SOCKERROR(connect(socket_id , (struct sockaddr *)&server_addr ,sizeof(server_addr)));
+		CHECK_SOCKERROR(connect(socket_id , (struct sockaddr *)&server_addr , sizeof(server_addr)));
 	
 	/* send required file to read to server */
     		send(socket_id,argv[2],strlen(argv[2]),0);
@@ -84,7 +81,7 @@ int main(int argc , char const * argv[])
 	{
 	
 	/* receve data from server */
-    	if(recv(socket_id,mesg[1],sizeof(mesg[1]),0)==0)
+    	if(recv(socket_id,&mesg[1],sizeof(mesg[1]),0)==0)
     	{
 		fclose(fp);
 		break ;

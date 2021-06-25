@@ -1,18 +1,12 @@
-# transfer-files-using-sockets
+this commit I want to use the server to serve parallel client but how can that be  , so we have multiple solution 
+
+one of them that I implemented in this commit is the nature of fork the process into multiple process 
+but you need also to know that when you fork your process you are actually generate a new process with its Owen  resources but its bad solution when you deal with concurrency so the best solution that I prefer is use multi threads so you can generate as you want number of threads with Owen attributes 
+so this commit I use to introduce the idea not much that this    
+so if you look at the structure of the project you will find client & client2 & server these are executable  files that we will deal with so just type make in your terminal then open terminal for each process  
+
+you can use signals to pause and resume the server application 
 
 
+https://www.youtube.com/watch?v=dZ7Ve1CVWdY
 
-here this is a sample example of how we can use sockets to transfer files through network 
-in this project the client will send destination and source file through the command line 
-you can see how it can be through the video on YouTube 
-and also, I use signals to make a politic way of ending transfer to do two things to release the socket and to close the file 
-and to inform the client that server end the transfer 
-I hope this project help you to get more deep into sockets and how it work , interact with operating system and the network 
-
-to build this project you only need to open terminal in your project directory and the type make this will generate 
-server and client executable files then open another terminal one for client and the other for server so first run server then run your client with the required arguments 
-
-if you press ctrl + c we will see message on the ending of transfer 
-
-
-https://www.youtube.com/watch?v=cOpA3JU3854 

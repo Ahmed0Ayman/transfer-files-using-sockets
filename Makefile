@@ -4,7 +4,7 @@
 #this is simple makefile
 
 
-all :  server  client 
+all :  server  client  client2
 
 server: server.o 
 	gcc $^ -o $@
@@ -12,6 +12,11 @@ server: server.o
 
 client:  client.o
 	gcc $^ -o $@
+
+client2:  client2.o
+	gcc $^ -o $@
+
+
 
 %.o: %.c 
 	gcc  -c   $<
